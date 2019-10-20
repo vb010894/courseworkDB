@@ -15,7 +15,14 @@ public class OrganizationController
                     @RequestParam int limit
             )
     {
-        return new OrganizationModel().getOrganization(start, page, limit, id);
+        try
+        {
+            return new OrganizationModel().getOrganization(start, page, limit, id);
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \"" + ex.getMessage() + "\", items:[]}";
+        }
     }
 
     @RequestMapping(value="/org/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
@@ -24,9 +31,16 @@ public class OrganizationController
                     @PathVariable String id
             )
     {
-        return new OrganizationModel().deleteOrganization(id).toString();
+        try
+        {
+            new OrganizationModel().deleteOrganization(id);
+            return "{\"state\": true, \"Count\":1}";
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
     }
-
     @RequestMapping(value="/org/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public String updateOrganization
             (
@@ -34,7 +48,15 @@ public class OrganizationController
                     @PathVariable String id
             )
     {
-        return model.updateOrganization(id).toString();
+        try
+        {
+            return model.updateOrganization(id).toString();
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
+
     }
 
     @RequestMapping(value="/org", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
@@ -45,13 +67,28 @@ public class OrganizationController
                     @RequestParam int limit
             )
     {
-        return new OrganizationModel().getOrganization(start, page, limit, "");
+        try
+        {
+            return new OrganizationModel().getOrganization(start, page, limit, "");
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
     }
 
     @RequestMapping(value="/org", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public String setOrganization(@RequestBody OrganizationModel model)
     {
-        return model.setOrganization().toString();
+        try
+        {
+            return model.setOrganization().toString();
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
+
     }
 
 }

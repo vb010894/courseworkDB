@@ -57,7 +57,7 @@ public class OrganizationModel
     private String oktmo;
 
 
-    public String getOrganization(int start, int page, int limit, String id)
+    public String getOrganization(int start, int page, int limit, String id) throws Exception
     {
         JSONObject result = new JSONObject();
         JSONArray items = new JSONArray();
@@ -107,7 +107,7 @@ public class OrganizationModel
         return result.toString();
     }
 
-    public JSONObject setOrganization()
+    public JSONObject setOrganization() throws Exception
     {
         JSONObject result = new JSONObject();
         String sqlQuery = "insert into organization" +
@@ -133,7 +133,7 @@ public class OrganizationModel
         return result;
     }
 
-    public JSONObject deleteOrganization(String id)
+    public JSONObject deleteOrganization(String id) throws Exception
     {
         JSONObject result = new JSONObject();
         String sqlQuery = "delete from organization " +
@@ -149,7 +149,7 @@ public class OrganizationModel
         return result;
     }
 
-    public JSONObject updateOrganization(String id)
+    public JSONObject updateOrganization(String id) throws Exception
     {
         JSONObject result = new JSONObject();
         String sqlQuery = "update organization set " +

@@ -11,36 +11,15 @@ public class SqlWork
     private static Connection con;
     private static Statement stmt;
 
-    public void updateQuery(String Query)
+    public void updateQuery(String Query) throws Exception
     {
-        try
-        {
-            stmt.executeUpdate(Query);
-        }
-        catch (SQLException sql)
-        {
-            System.out.println();
-            System.out.println("------ОШИБКА------");
-            System.out.println("Сообщение - " + sql);
-            System.out.println("StackTrace - " + sql.getStackTrace());
-        }
+        stmt.executeUpdate(Query);
     }
 
-    public ResultSet getResult(String Query) {
-        ResultSet result = null;
-        try
-        {
-            result = stmt.executeQuery(Query);
-        }
-        catch (SQLException sql)
-        {
-            System.out.println();
-            System.out.println("------ОШИБКА------");
-            System.out.println("Сообщение - " + sql);
-            System.out.println("StackTrace - " + sql.getStackTrace());
-        }
+    public ResultSet getResult(String Query) throws Exception
+    {
 
-        return result;
+        return stmt.executeQuery(Query);
     }
 
     public void openConnection()
