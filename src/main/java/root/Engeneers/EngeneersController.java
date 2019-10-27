@@ -1,20 +1,21 @@
-package root.Group;
+package root.Engeneers;
 
 import org.springframework.web.bind.annotation.*;
+import root.Group.GroupModel;
 
 @RestController
 @RequestMapping("/_apis/")
-public class GroupController
+public class EngeneersController
 {
-    @RequestMapping(value = "Group", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Engeneers", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public String setTeamLeads
             (
-                    @RequestBody GroupModel model
+                    @RequestBody EngeneersModel model
             )
     {
         try
         {
-            model.setGroup();
+            model.setEngeneer();
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -23,12 +24,12 @@ public class GroupController
         }
     }
 
-    @RequestMapping(value = "Group", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Engeneers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String getTeamLeads()
     {
         try
         {
-            return GroupModel.getGroup();
+            return EngeneersModel.getEngeneer();
         }
         catch (Exception ex)
         {
@@ -36,15 +37,15 @@ public class GroupController
         }
     }
 
-    @RequestMapping(value = "Group/{idGroup}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Engeneers/{idEngeneer}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String getTeamLeadsById
             (
-                    @PathVariable String idGroup
+                    @PathVariable String idEngeneer
             )
     {
         try
         {
-            return GroupModel.getGroupById(idGroup);
+            return EngeneersModel.getEngeneerById(idEngeneer);
         }
         catch (Exception ex)
         {
@@ -52,16 +53,16 @@ public class GroupController
         }
     }
 
-    @RequestMapping(value = "Group/{idGroup}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Engeneers/{idEngeneer}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public String updateTeamLeads
             (
-                    @PathVariable String idGroup,
-                    @RequestBody GroupModel model
+                    @PathVariable String idEngeneer,
+                    @RequestBody EngeneersModel model
             )
     {
         try
         {
-            model.updateGroup(idGroup);
+            model.updateEngeneer(idEngeneer);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -70,15 +71,15 @@ public class GroupController
         }
     }
 
-    @RequestMapping(value = "Group/{idGroup}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Engeneers/{idEngeneer}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     public String DeleteTeamLeads
             (
-                    @PathVariable String idGroup
+                    @PathVariable String idEngeneer
             )
     {
         try
         {
-            GroupModel.deleteGroup(idGroup);
+            EngeneersModel.deleteEngeneer(idEngeneer);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -86,5 +87,6 @@ public class GroupController
             return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
         }
     }
+
 
 }
