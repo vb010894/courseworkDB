@@ -1,21 +1,21 @@
-package root.Engeneers;
+package root.Workers;
 
 import org.springframework.web.bind.annotation.*;
-import root.Group.GroupModel;
+import root.Engeneers.EngeneersModel;
 
 @RestController
 @RequestMapping("/_apis/")
-public class EngeneersController
+public class WorkersController
 {
-    @RequestMapping(value = "Engeneers", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Workers", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public String set
             (
-                    @RequestBody EngeneersModel model
+                    @RequestBody WorkersModel model
             )
     {
         try
         {
-            model.setEngeneer();
+            model.set();
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -24,12 +24,12 @@ public class EngeneersController
         }
     }
 
-    @RequestMapping(value = "Engeneers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Workers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String get()
     {
         try
         {
-            return EngeneersModel.getEngeneer();
+            return WorkersModel.get();
         }
         catch (Exception ex)
         {
@@ -37,15 +37,15 @@ public class EngeneersController
         }
     }
 
-    @RequestMapping(value = "Engeneers/{idEngeneer}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Workers/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String getById
             (
-                    @PathVariable String idEngeneer
+                    @PathVariable String id
             )
     {
         try
         {
-            return EngeneersModel.getEngeneerById(idEngeneer);
+            return WorkersModel.getById(id);
         }
         catch (Exception ex)
         {
@@ -53,16 +53,16 @@ public class EngeneersController
         }
     }
 
-    @RequestMapping(value = "Engeneers/{idEngeneer}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Workers/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public String update
             (
-                    @PathVariable String idEngeneer,
-                    @RequestBody EngeneersModel model
+                    @PathVariable String id,
+                    @RequestBody WorkersModel model
             )
     {
         try
         {
-            model.updateEngeneer(idEngeneer);
+            model.update(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -71,15 +71,15 @@ public class EngeneersController
         }
     }
 
-    @RequestMapping(value = "Engeneers/{idEngeneer}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Workers/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     public String Delete
             (
-                    @PathVariable String idEngeneer
+                    @PathVariable String id
             )
     {
         try
         {
-            EngeneersModel.deleteEngeneer(idEngeneer);
+            WorkersModel.delete(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -87,6 +87,4 @@ public class EngeneersController
             return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
         }
     }
-
-
 }
