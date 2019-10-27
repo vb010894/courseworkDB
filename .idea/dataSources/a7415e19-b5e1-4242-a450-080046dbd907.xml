@@ -1114,919 +1114,765 @@
     <table id="279" parent="2" name="departament"/>
     <table id="280" parent="2" name="engeneers"/>
     <table id="281" parent="2" name="estimate"/>
-    <table id="282" parent="2" name="group"/>
+    <table id="282" parent="2" name="groups"/>
     <table id="283" parent="2" name="machine"/>
     <table id="284" parent="2" name="master"/>
     <table id="285" parent="2" name="materials"/>
     <table id="286" parent="2" name="objects"/>
-    <table id="287" parent="2" name="organization">
-      <Comment>organization info</Comment>
-    </table>
+    <table id="287" parent="2" name="organization"/>
     <table id="288" parent="2" name="reports"/>
     <table id="289" parent="2" name="schedule"/>
     <table id="290" parent="2" name="suit"/>
     <table id="291" parent="2" name="teamleads"/>
     <table id="292" parent="2" name="typebradge"/>
-    <table id="293" parent="2" name="typebridge"/>
-    <table id="294" parent="2" name="typebuilding"/>
-    <table id="295" parent="2" name="typehouse"/>
-    <table id="296" parent="2" name="typeroad"/>
-    <table id="297" parent="2" name="workeers"/>
-    <table id="298" parent="2" name="works"/>
-    <column id="299" parent="279" name="id">
+    <table id="293" parent="2" name="typebuilding"/>
+    <table id="294" parent="2" name="typeroad"/>
+    <table id="295" parent="2" name="workeers"/>
+    <table id="296" parent="2" name="works"/>
+    <column id="297" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="279" name="name">
+    <column id="298" parent="279" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="279" name="adress">
+    <column id="299" parent="279" name="adress">
       <Position>3</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>armscii8_general_ci</Collation>
     </column>
-    <column id="302" parent="279" name="org">
+    <column id="300" parent="279" name="org">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="303" parent="279" name="fk_departament_organization_idx">
+    <index id="301" parent="279" name="fk_departament_organization_idx">
       <ColNames>org</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="304" parent="279" name="PRIMARY">
+    <key id="302" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="305" parent="279" name="fk_departament_organization">
+    <foreign-key id="303" parent="279" name="fk_departament_organization">
       <ColNames>org</ColNames>
       <RefTableName>organization</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="306" parent="280" name="id">
+    <column id="304" parent="280" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="280" name="fio">
+    <column id="305" parent="280" name="fio">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="280" name="position">
+    <column id="306" parent="280" name="position">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="280" name="office">
+    <column id="307" parent="280" name="office">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="280" name="group">
+    <column id="308" parent="280" name="group">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="311" parent="280" name="fk_engeneers_group1_idx">
+    <index id="309" parent="280" name="fk_engeneers_group1_idx">
       <ColNames>group</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="312" parent="280" name="PRIMARY">
+    <key id="310" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="313" parent="280" name="fk_engeneers_group1">
+    <foreign-key id="311" parent="280" name="fk_engeneers_group1">
       <ColNames>group</ColNames>
-      <RefTableName>group</RefTableName>
+      <RefTableName>groups</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="314" parent="281" name="id">
+    <column id="312" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="281" name="description">
+    <column id="313" parent="281" name="description">
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="281" name="costAll">
+    <column id="314" parent="281" name="costAll">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="317" parent="281" name="PRIMARY">
+    <key id="315" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="318" parent="282" name="id">
+    <column id="316" parent="282" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="282" name="shift">
+    <column id="317" parent="282" name="shift">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="282" name="maste">
+    <column id="318" parent="282" name="maste">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="321" parent="282" name="fk_group_master1_idx">
+    <index id="319" parent="282" name="fk_group_master1_idx">
       <ColNames>maste</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="322" parent="282" name="PRIMARY">
+    <key id="320" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="323" parent="282" name="fk_group_master1">
+    <foreign-key id="321" parent="282" name="fk_group_master1">
       <ColNames>maste</ColNames>
       <RefTableName>master</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="324" parent="283" name="id">
+    <column id="322" parent="283" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="283" name="type">
+    <column id="323" parent="283" name="type">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="283" name="model">
+    <column id="324" parent="283" name="model">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="283" name="number">
+    <column id="325" parent="283" name="number">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="283" name="departament">
+    <column id="326" parent="283" name="departament">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="283" name="objects">
+    <column id="327" parent="283" name="objects">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="330" parent="283" name="fk_machine_departament1_idx">
+    <index id="328" parent="283" name="fk_machine_departament1_idx">
       <ColNames>departament</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="331" parent="283" name="fk_machine_objects1_idx">
+    <index id="329" parent="283" name="fk_machine_objects1_idx">
       <ColNames>objects</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="332" parent="283" name="PRIMARY">
+    <key id="330" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="333" parent="283" name="fk_machine_departament1">
+    <foreign-key id="331" parent="283" name="fk_machine_departament1">
       <ColNames>departament</ColNames>
       <RefTableName>departament</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="334" parent="283" name="fk_machine_objects1">
+    <foreign-key id="332" parent="283" name="fk_machine_objects1">
       <ColNames>objects</ColNames>
       <RefTableName>objects</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="335" parent="284" name="id">
+    <column id="333" parent="284" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="284" name="fio">
+    <column id="334" parent="284" name="fio">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="284" name="teamLeads">
+    <column id="335" parent="284" name="teamLeads">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="338" parent="284" name="fk_master_teamLeads1_idx">
+    <index id="336" parent="284" name="fk_master_teamLeads1_idx">
       <ColNames>teamLeads</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="339" parent="284" name="PRIMARY">
+    <key id="337" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="340" parent="284" name="fk_master_teamLeads1">
+    <foreign-key id="338" parent="284" name="fk_master_teamLeads1">
       <ColNames>teamLeads</ColNames>
       <RefTableName>teamleads</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="341" parent="285" name="id">
+    <column id="339" parent="285" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="285" name="name">
+    <column id="340" parent="285" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="285" name="planCount">
+    <column id="341" parent="285" name="planCount">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="285" name="factCount">
+    <column id="342" parent="285" name="factCount">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="345" parent="285" name="cost">
+    <column id="343" parent="285" name="cost">
       <Position>5</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="346" parent="285" name="estimate">
+    <column id="344" parent="285" name="estimate">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="347" parent="285" name="fk_materials_estimate1_idx">
+    <index id="345" parent="285" name="fk_materials_estimate1_idx">
       <ColNames>estimate</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="348" parent="285" name="PRIMARY">
+    <key id="346" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="349" parent="285" name="fk_materials_estimate1">
+    <foreign-key id="347" parent="285" name="fk_materials_estimate1">
       <ColNames>estimate</ColNames>
       <RefTableName>estimate</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="350" parent="286" name="id">
+    <column id="348" parent="286" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="351" parent="286" name="name">
+    <column id="349" parent="286" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="350" parent="286" name="adress">
+      <Position>3</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="351" parent="286" name="suit">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="352" parent="286" name="type">
-      <Position>3</Position>
+      <Position>5</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="353" parent="286" name="org">
-      <Position>4</Position>
+    <column id="353" parent="286" name="reports">
+      <Position>6</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="354" parent="286" name="org_idx">
-      <ColNames>org</ColNames>
+    <index id="354" parent="286" name="fk_objects_suit1_idx">
+      <ColNames>suit</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="355" parent="286" name="PRIMARY">
+    <index id="355" parent="286" name="fk_objects_typeRoad1_idx">
+      <ColNames>type</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="356" parent="286" name="fk_objects_reports1_idx">
+      <ColNames>reports</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="357" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="356" parent="286" name="org">
-      <ColNames>org</ColNames>
-      <RefTableName>organization</RefTableName>
+    <foreign-key id="358" parent="286" name="fk_objects_suit1">
+      <ColNames>suit</ColNames>
+      <RefTableName>suit</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="357" parent="287" name="id">
+    <foreign-key id="359" parent="286" name="fk_objects_typeBradge1">
+      <ColNames>type</ColNames>
+      <RefTableName>typebradge</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="360" parent="286" name="fk_objects_typeBuilding1">
+      <ColNames>type</ColNames>
+      <RefTableName>typebuilding</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="361" parent="286" name="fk_objects_typeRoad1">
+      <ColNames>type</ColNames>
+      <RefTableName>typeroad</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="362" parent="286" name="fk_objects_reports1">
+      <ColNames>reports</ColNames>
+      <RefTableName>reports</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="363" parent="287" name="id">
       <Position>1</Position>
-      <Comment>Индификатор</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="358" parent="287" name="name">
+    <column id="364" parent="287" name="name">
       <Position>2</Position>
-      <Comment>Наименование компании</Comment>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="359" parent="287" name="inn">
+    <column id="365" parent="287" name="adress">
       <Position>3</Position>
-      <Comment>ИНН компании</Comment>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="360" parent="287" name="kpp">
+    <column id="366" parent="287" name="inn">
       <Position>4</Position>
-      <Comment>КПП компании</Comment>
-      <DataType>varchar(9)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="361" parent="287" name="oktmo">
+    <column id="367" parent="287" name="kpp">
       <Position>5</Position>
-      <Comment>ОКТМО компании</Comment>
-      <DataType>varchar(8)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="287" name="ogrn">
-      <Position>6</Position>
-      <Comment>ОГРН компании</Comment>
-      <DataType>varchar(13)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="363" parent="287" name="PRIMARY">
+    <key id="368" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="364" parent="288" name="id">
+    <column id="369" parent="288" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="288" name="description">
+    <column id="370" parent="288" name="description">
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="366" parent="288" name="PRIMARY">
+    <key id="371" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="367" parent="289" name="id">
+    <column id="372" parent="289" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="289" name="startFact">
+    <column id="373" parent="289" name="startFact">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="289" name="planDate">
+    <column id="374" parent="289" name="planDate">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="289" name="endPlan">
+    <column id="375" parent="289" name="endPlan">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="289" name="endFact">
+    <column id="376" parent="289" name="endFact">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="372" parent="289" name="PRIMARY">
+    <key id="377" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="373" parent="290" name="id">
+    <column id="378" parent="290" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="290" name="name">
+    <column id="379" parent="290" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="375" parent="290" name="departament">
+    <column id="380" parent="290" name="departament">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="376" parent="290" name="fk_suit_departament1_idx">
+    <index id="381" parent="290" name="fk_suit_departament1_idx">
       <ColNames>departament</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="377" parent="290" name="PRIMARY">
+    <key id="382" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="378" parent="290" name="fk_suit_departament1">
-      <ColNames>departament</ColNames>
-      <RefTableName>departament</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="379" parent="291" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="380" parent="291" name="FIO">
-      <Position>2</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="381" parent="291" name="departament">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="382" parent="291" name="fk_teamLeads_departament1_idx">
-      <ColNames>departament</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="383" parent="291" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="384" parent="291" name="fk_teamLeads_departament1">
+    <foreign-key id="383" parent="290" name="fk_suit_departament1">
       <ColNames>departament</ColNames>
       <RefTableName>departament</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="385" parent="292" name="id">
+    <column id="384" parent="291" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="386" parent="292" name="name">
-      <Position>2</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="387" parent="292" name="lenght">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="388" parent="292" name="partType">
-      <Position>4</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="389" parent="292" name="partCount">
-      <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="390" parent="292" name="driverLineCount">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="391" parent="292" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="392" parent="293" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="393" parent="293" name="name">
-      <Position>2</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="394" parent="293" name="lenght">
-      <Position>3</Position>
-      <DataType>float|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="395" parent="293" name="typePart">
-      <Position>4</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="396" parent="293" name="width">
-      <Position>5</Position>
-      <DataType>float|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="397" parent="293" name="object">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="398" parent="293" name="objectBridge_idx">
-      <ColNames>object</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="399" parent="293" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="400" parent="293" name="objectBridge">
-      <ColNames>object</ColNames>
-      <RefTableName>objects</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="401" parent="294" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="402" parent="294" name="name">
-      <Position>2</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="403" parent="294" name="floors">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="404" parent="294" name="flat">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="405" parent="294" name="foundationType">
-      <Position>5</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="406" parent="294" name="roofType">
-      <Position>6</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="407" parent="294" name="coverType">
-      <Position>7</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="408" parent="294" name="square">
-      <Position>8</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="409" parent="294" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="410" parent="295" name="id">
-      <Position>1</Position>
-      <Comment>Индификатор</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="411" parent="295" name="name">
-      <Position>2</Position>
-      <Comment>Наименование объекта</Comment>
-      <DataType>varchar(200)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="412" parent="295" name="square">
-      <Position>3</Position>
-      <Comment>Площадь</Comment>
-      <DataType>float|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="413" parent="295" name="floorCount">
-      <Position>4</Position>
-      <Comment>Количество этажей</Comment>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="414" parent="295" name="appCount">
-      <Position>5</Position>
-      <Comment>Количество помещений</Comment>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="415" parent="295" name="materialType">
-      <Position>6</Position>
-      <Comment>Тип материала</Comment>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="416" parent="295" name="roofType">
-      <Position>7</Position>
-      <Comment>Тип крыши</Comment>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="417" parent="295" name="wallsType">
-      <Position>8</Position>
-      <Comment>тип стен</Comment>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="418" parent="295" name="coversType">
-      <Position>9</Position>
-      <Comment>тип перекрытий</Comment>
-      <DataType>varchar(100)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="419" parent="295" name="object">
-      <Position>10</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="420" parent="295" name="adress">
-      <Position>11</Position>
-      <DataType>varchar(200)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="421" parent="295" name="object_idx">
-      <ColNames>object</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="422" parent="295" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="423" parent="295" name="object">
-      <ColNames>object</ColNames>
-      <RefTableName>objects</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="424" parent="296" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="425" parent="296" name="name">
+    <column id="385" parent="291" name="FIO">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="426" parent="296" name="lenght">
+    <column id="386" parent="291" name="departament">
       <Position>3</Position>
-      <DataType>float|0s</DataType>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="387" parent="291" name="fk_teamLeads_departament1_idx">
+      <ColNames>departament</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="388" parent="291" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="389" parent="291" name="fk_teamLeads_departament1">
+      <ColNames>departament</ColNames>
+      <RefTableName>departament</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="390" parent="292" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="391" parent="292" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="427" parent="296" name="startAdress">
+    <column id="392" parent="292" name="lenght">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="393" parent="292" name="partType">
       <Position>4</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="428" parent="296" name="endAdress">
+    <column id="394" parent="292" name="partCount">
       <Position>5</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="429" parent="296" name="object">
+    <column id="395" parent="292" name="driverLineCount">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="430" parent="296" name="typeRoad">
+    <key id="396" parent="292" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="397" parent="293" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="398" parent="293" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="399" parent="293" name="floors">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="400" parent="293" name="flat">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="401" parent="293" name="foundationType">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="402" parent="293" name="roofType">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="403" parent="293" name="coverType">
       <Position>7</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="431" parent="296" name="width">
+    <column id="404" parent="293" name="square">
       <Position>8</Position>
-      <DataType>float|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="432" parent="296" name="object_idx">
-      <ColNames>object</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="433" parent="296" name="PRIMARY">
+    <key id="405" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="434" parent="296" name="objectRoad">
-      <ColNames>object</ColNames>
-      <RefTableName>objects</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="435" parent="297" name="id">
+    <column id="406" parent="294" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="436" parent="297" name="fio">
+    <column id="407" parent="294" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="437" parent="297" name="position">
+    <column id="408" parent="294" name="cover">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="438" parent="297" name="group">
+    <column id="409" parent="294" name="lenght">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="439" parent="297" name="fk_workeers_group1_idx">
-      <ColNames>group</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="440" parent="297" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="441" parent="297" name="fk_workeers_group1">
-      <ColNames>group</ColNames>
-      <RefTableName>group</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
-    <column id="442" parent="298" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="443" parent="298" name="type">
-      <Position>2</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="444" parent="298" name="schedule">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="445" parent="298" name="reports">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="446" parent="298" name="estimate">
+    <column id="410" parent="294" name="driveLineCount">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="447" parent="298" name="group">
-      <Position>6</Position>
+    <key id="411" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="412" parent="295" name="id">
+      <Position>1</Position>
       <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="413" parent="295" name="fio">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="448" parent="298" name="fk_works_schedule1_idx">
+    <column id="414" parent="295" name="position">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="415" parent="295" name="group">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="416" parent="295" name="fk_workeers_group1_idx">
+      <ColNames>group</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="417" parent="295" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="418" parent="295" name="fk_workeers_group1">
+      <ColNames>group</ColNames>
+      <RefTableName>groups</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="419" parent="296" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="420" parent="296" name="type">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="421" parent="296" name="schedule">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="422" parent="296" name="reports">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="423" parent="296" name="estimate">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="424" parent="296" name="group">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="425" parent="296" name="fk_works_schedule1_idx">
       <ColNames>schedule</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="449" parent="298" name="fk_works_reports1_idx">
+    <index id="426" parent="296" name="fk_works_reports1_idx">
       <ColNames>reports</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="450" parent="298" name="fk_works_estimate1_idx">
+    <index id="427" parent="296" name="fk_works_estimate1_idx">
       <ColNames>estimate</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="451" parent="298" name="fk_works_group1_idx">
+    <index id="428" parent="296" name="fk_works_group1_idx">
       <ColNames>group</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="452" parent="298" name="PRIMARY">
+    <key id="429" parent="296" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="453" parent="298" name="fk_works_schedule1">
+    <foreign-key id="430" parent="296" name="fk_works_schedule1">
       <ColNames>schedule</ColNames>
       <RefTableName>schedule</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="454" parent="298" name="fk_works_reports1">
+    <foreign-key id="431" parent="296" name="fk_works_reports1">
       <ColNames>reports</ColNames>
       <RefTableName>reports</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="455" parent="298" name="fk_works_estimate1">
+    <foreign-key id="432" parent="296" name="fk_works_estimate1">
       <ColNames>estimate</ColNames>
       <RefTableName>estimate</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="456" parent="298" name="fk_works_group1">
+    <foreign-key id="433" parent="296" name="fk_works_group1">
       <ColNames>group</ColNames>
-      <RefTableName>group</RefTableName>
+      <RefTableName>groups</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
   </database-model>

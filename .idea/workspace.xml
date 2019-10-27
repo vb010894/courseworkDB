@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba176055-9a7f-4492-b34a-070d29780143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/Masters/MasterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/Masters/MasterModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/TeamLeads/TeamLeadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/TeamLeads/TeamLeadsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/root/Group/GroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/root/Group/GroupModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7415e19-b5e1-4242-a450-080046dbd907.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7415e19-b5e1-4242-a450-080046dbd907.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +48,7 @@
         <item name="siteUser@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="building: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="master: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="groups: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -139,7 +138,17 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2807be0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@6f6817e9" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3d6ad66f" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2807be0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3a273022" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2807be0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@673384fd" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -171,7 +180,7 @@
       <workItem from="1571674161349" duration="4372000" />
       <workItem from="1572082743092" duration="4314000" />
       <workItem from="1572097898160" duration="2608000" />
-      <workItem from="1572161144483" duration="4521000" />
+      <workItem from="1572161144483" duration="8955000" />
     </task>
     <task id="LOCAL-00001" summary="OrganizationTable RESTfull add">
       <created>1569872716532</created>
@@ -187,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571595201760</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Master and TeamLeads">
+      <created>1572166055992</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572166055992</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +225,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="OrganizationTable RESTfull add" />
     <MESSAGE value="Departament model and controller added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Departament model and controller added" />
+    <MESSAGE value="Added Master and TeamLeads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Master and TeamLeads" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
