@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba176055-9a7f-4492-b34a-070d29780143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/Reports/ReportsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/Reports/ReportsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/root/Estimate/EstimateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/root/Estimate/EstimateModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7415e19-b5e1-4242-a450-080046dbd907.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7415e19-b5e1-4242-a450-080046dbd907.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/root/Workers/WorkersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/root/Workers/WorkersController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,14 +50,14 @@
         <item name="siteUser@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="building: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="reports: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="estimate: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="siteUser@127.0.0.1" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="building: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="workeers: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="materials: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -136,22 +139,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2807be0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2807be0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@64997819" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2807be0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3d6ad66f" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -181,7 +169,9 @@
       <workItem from="1571674161349" duration="4372000" />
       <workItem from="1572082743092" duration="4314000" />
       <workItem from="1572097898160" duration="2608000" />
-      <workItem from="1572161144483" duration="17353000" />
+      <workItem from="1572161144483" duration="17616000" />
+      <workItem from="1572280879776" duration="2673000" />
+      <workItem from="1572288844588" duration="1747000" />
     </task>
     <task id="LOCAL-00001" summary="OrganizationTable RESTfull add">
       <created>1569872716532</created>
@@ -225,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572196746151</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added Reports">
+      <created>1572199673593</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572199673615</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +248,8 @@
     <MESSAGE value="Added Groups" />
     <MESSAGE value="Added Engeneers" />
     <MESSAGE value="Added Workers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Workers" />
+    <MESSAGE value="Added Reports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Reports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -293,7 +291,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/root/Reports/ReportsModel.java</url>
-          <line>104</line>
+          <line>105</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>

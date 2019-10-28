@@ -1,15 +1,16 @@
-package root.Workers;
+package root.Estimate;
 
 import org.springframework.web.bind.annotation.*;
+import root.Reports.ReportsModel;
 
 @RestController
 @RequestMapping("/_apis/")
-public class WorkersController
+public class EstimateController
 {
-    @RequestMapping(value = "Workers", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Estimate", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public String set
             (
-                    @RequestBody WorkersModel model
+                    @RequestBody EstimateModel model
             )
     {
         try
@@ -23,12 +24,12 @@ public class WorkersController
         }
     }
 
-    @RequestMapping(value = "Workers", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Estimate", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String get()
     {
         try
         {
-            return WorkersModel.get();
+            return EstimateModel.get();
         }
         catch (Exception ex)
         {
@@ -36,7 +37,7 @@ public class WorkersController
         }
     }
 
-    @RequestMapping(value = "Workers/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Estimate/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String getById
             (
                     @PathVariable String id
@@ -44,7 +45,7 @@ public class WorkersController
     {
         try
         {
-            return WorkersModel.getById(id);
+            return EstimateModel.getById(id);
         }
         catch (Exception ex)
         {
@@ -52,11 +53,11 @@ public class WorkersController
         }
     }
 
-    @RequestMapping(value = "Workers/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Estimate/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public String update
             (
                     @PathVariable String id,
-                    @RequestBody WorkersModel model
+                    @RequestBody EstimateModel model
             )
     {
         try
@@ -70,7 +71,7 @@ public class WorkersController
         }
     }
 
-    @RequestMapping(value = "Workers/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Estimate/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     public String Delete
             (
                     @PathVariable String id
@@ -78,7 +79,7 @@ public class WorkersController
     {
         try
         {
-            WorkersModel.delete(id);
+            EstimateModel.delete(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
