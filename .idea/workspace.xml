@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba176055-9a7f-4492-b34a-070d29780143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/Estimate/EstimateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/root/Estimate/EstimateModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7415e19-b5e1-4242-a450-080046dbd907.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7415e19-b5e1-4242-a450-080046dbd907.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/root/Materials/MaterialsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/root/Materials/MaterialsModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/root/Workers/WorkersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/root/Workers/WorkersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/root/Estimate/EstimateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/root/Estimate/EstimateController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +169,8 @@
       <workItem from="1572097898160" duration="2608000" />
       <workItem from="1572161144483" duration="17616000" />
       <workItem from="1572280879776" duration="2673000" />
-      <workItem from="1572288844588" duration="1747000" />
+      <workItem from="1572288844588" duration="2275000" />
+      <workItem from="1572710659329" duration="2695000" />
     </task>
     <task id="LOCAL-00001" summary="OrganizationTable RESTfull add">
       <created>1569872716532</created>
@@ -222,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572199673615</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Estimate">
+      <created>1572290853522</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572290853522</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +255,8 @@
     <MESSAGE value="Added Engeneers" />
     <MESSAGE value="Added Workers" />
     <MESSAGE value="Added Reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Reports" />
+    <MESSAGE value="Added Estimate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Estimate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
