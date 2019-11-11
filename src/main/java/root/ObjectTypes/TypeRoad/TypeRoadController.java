@@ -1,23 +1,20 @@
-package root.Schedule;
+package root.ObjectTypes.TypeRoad;
 
 import org.springframework.web.bind.annotation.*;
-import root.AnnotationTest;
 
 @RestController
 @RequestMapping("/_apis/")
-public class ScheduleController
+public class TypeRoadController
 {
-    @RequestMapping(value = "Schedule", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeRoad", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public String set
             (
-                    @RequestBody ScheduleModel model
+                    @RequestBody TypeRoadModel model
             )
     {
         try
         {
-
-            model.set();
-            return "{state:true, count:1, items:[]}";
+            return model.set();
         }
         catch (Exception ex)
         {
@@ -25,12 +22,13 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+
+    @RequestMapping(value = "Type/TypeRoad", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String get()
     {
         try
         {
-            return ScheduleModel.get();
+            return TypeRoadModel.get();
         }
         catch (Exception ex)
         {
@@ -38,7 +36,7 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeRoad/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String getById
             (
                     @PathVariable String id
@@ -46,7 +44,7 @@ public class ScheduleController
     {
         try
         {
-            return ScheduleModel.getById(id);
+            return TypeRoadModel.getById(id);
         }
         catch (Exception ex)
         {
@@ -54,16 +52,16 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeRoad/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public String update
             (
                     @PathVariable String id,
-                    @RequestBody ScheduleModel model
+                    @RequestBody TypeRoadModel model
             )
     {
         try
         {
-            model.update(id);
+            model.updater(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -72,7 +70,7 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeRoad/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     public String Delete
             (
                     @PathVariable String id
@@ -80,7 +78,7 @@ public class ScheduleController
     {
         try
         {
-            ScheduleModel.delete(id);
+            TypeRoadModel.delete(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)

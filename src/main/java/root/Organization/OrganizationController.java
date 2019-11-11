@@ -1,94 +1,90 @@
 package root.Organization;
 
 import org.springframework.web.bind.annotation.*;
+import root.ObjectTypes.TypeBuilding.TypeBuildingModel;
 
 @RestController
 @RequestMapping("/_apis")
 public class OrganizationController
 {
-    @RequestMapping(value="/org/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public String getOrganization
+    @RequestMapping(value = "Org", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    public String set
+            (
+                    @RequestBody OrganizationModel model
+            )
+    {
+        try
+        {
+            return model.set();
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
+    }
+
+
+    @RequestMapping(value = "Org", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    public String get()
+    {
+        try
+        {
+            return OrganizationModel.get();
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
+    }
+
+    @RequestMapping(value = "Org/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    public String getById
+            (
+                    @PathVariable String id
+            )
+    {
+        try
+        {
+            return OrganizationModel.getById(id);
+        }
+        catch (Exception ex)
+        {
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
+        }
+    }
+
+    @RequestMapping(value = "Org/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    public String update
             (
                     @PathVariable String id,
-                    @RequestParam int start,
-                    @RequestParam int page,
-                    @RequestParam int limit
+                    @RequestBody OrganizationModel model
             )
     {
         try
         {
-            return new OrganizationModel().getOrganization(start, page, limit, id);
+            model.updater(id);
+            return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
         {
-            return "{\"state\":false, \"count\":0, \"message\": \"" + ex.getMessage() + "\", items:[]}";
+            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
         }
     }
 
-    @RequestMapping(value="/org/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
-    public String deleteOrganization
+    @RequestMapping(value = "Org/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
+    public String Delete
             (
                     @PathVariable String id
             )
     {
         try
         {
-            new OrganizationModel().deleteOrganization(id);
-            return "{\"state\": true, \"Count\":1}";
+            OrganizationModel.delete(id);
+            return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
         {
             return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
         }
     }
-    @RequestMapping(value="/org/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
-    public String updateOrganization
-            (
-                    @RequestBody OrganizationModel model,
-                    @PathVariable String id
-            )
-    {
-        try
-        {
-            return model.updateOrganization(id).toString();
-        }
-        catch (Exception ex)
-        {
-            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
-        }
-
-    }
-
-    @RequestMapping(value="/org", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public String getOrganization
-            (
-                    @RequestParam int start,
-                    @RequestParam int page,
-                    @RequestParam int limit
-            )
-    {
-        try
-        {
-            return new OrganizationModel().getOrganization(start, page, limit, "");
-        }
-        catch (Exception ex)
-        {
-            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
-        }
-    }
-
-    @RequestMapping(value="/org", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
-    public String setOrganization(@RequestBody OrganizationModel model)
-    {
-        try
-        {
-            return model.setOrganization().toString();
-        }
-        catch (Exception ex)
-        {
-            return "{\"state\":false, \"count\":0, \"message\": \" " + ex.getMessage() + "\" items[]}";
-        }
-
-    }
-
 }

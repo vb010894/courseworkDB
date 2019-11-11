@@ -1,23 +1,21 @@
-package root.Schedule;
+package root.ObjectTypes.TypeBuilding;
 
 import org.springframework.web.bind.annotation.*;
-import root.AnnotationTest;
+import root.ObjectTypes.TypeBradge.TypeBradgeModel;
 
 @RestController
 @RequestMapping("/_apis/")
-public class ScheduleController
+public class TypeBuildingController
 {
-    @RequestMapping(value = "Schedule", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeBuilding", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
     public String set
             (
-                    @RequestBody ScheduleModel model
+                    @RequestBody TypeBuildingModel model
             )
     {
         try
         {
-
-            model.set();
-            return "{state:true, count:1, items:[]}";
+            return model.set();
         }
         catch (Exception ex)
         {
@@ -25,12 +23,13 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+
+    @RequestMapping(value = "Type/TypeBuilding", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String get()
     {
         try
         {
-            return ScheduleModel.get();
+            return TypeBuildingModel.get();
         }
         catch (Exception ex)
         {
@@ -38,7 +37,7 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeBuilding/{id}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public String getById
             (
                     @PathVariable String id
@@ -46,7 +45,7 @@ public class ScheduleController
     {
         try
         {
-            return ScheduleModel.getById(id);
+            return TypeBuildingModel.getById(id);
         }
         catch (Exception ex)
         {
@@ -54,16 +53,16 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeBuilding/{id}", method = RequestMethod.PUT, produces = "application/json; charset=utf-8")
     public String update
             (
                     @PathVariable String id,
-                    @RequestBody ScheduleModel model
+                    @RequestBody TypeBuildingModel model
             )
     {
         try
         {
-            model.update(id);
+            model.updater(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
@@ -72,7 +71,7 @@ public class ScheduleController
         }
     }
 
-    @RequestMapping(value = "Schedule/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "Type/TypeBuilding/{id}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     public String Delete
             (
                     @PathVariable String id
@@ -80,7 +79,7 @@ public class ScheduleController
     {
         try
         {
-            ScheduleModel.delete(id);
+            TypeBuildingModel.delete(id);
             return "{state:true, count:1, items:[]}";
         }
         catch (Exception ex)
