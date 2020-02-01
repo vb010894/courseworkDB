@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="E:\MyProjects\BuildCompany\src\main\java\com\vdzinovev\BuildCompany\App.java">
+<error line="12" severity="error" message="Class App should be declared as final." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
+</file>
+<file name="E:\MyProjects\BuildCompany\src\main\java\com\vdzinovev\BuildCompany\Core\Sql\Annotation\SqlField.java">
+</file>
+<file name="E:\MyProjects\BuildCompany\src\main\java\com\vdzinovev\BuildCompany\Core\Sql\Annotation\SqlQuery.java">
+</file>
+<file name="E:\MyProjects\BuildCompany\src\main\java\com\vdzinovev\BuildCompany\Core\Sql\DbLib.java">
+<error line="164" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="E:\MyProjects\BuildCompany\src\main\java\com\vdzinovev\BuildCompany\Core\Sql\Enums\QueryType.java">
+</file>
+</checkstyle>
